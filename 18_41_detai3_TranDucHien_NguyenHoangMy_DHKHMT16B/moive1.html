@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mới Về</title>
+    <script src="javascript/jquery-3.6.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script src="javascript/nhanxet.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+        function fn() {
+            alert("Bạn Đã Thêm Vào Giỏ Hàng")
+        }
+    </script>
+    <style>
+        #moive {
+            padding-top: 10px;
+            width: 1290px;
+            height: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <!--tìm kiếm-->
+    <style>
+        input[type=text] {
+            width: 160px;
+            -webkit-transition: width .35s ease-in-out;
+            transition: width .35s ease-in-out;
+        }
+        
+        input[type=text]:focus {
+            width: 190px;
+            background-color: rgb(194, 243, 194);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menutren">
+        <ul>
+            <li>
+                <a class="home" href="index.html"><img src="image/home.png" /></a>
+            </li>
+            <li><a class="wishlist" href="banchay1.html">Yêu thích</a></li>
+            <li><a class="account" href="gioithieu.html">Giới thiệu</a></li>
+            <li>
+                <a class="cart" href="gioihang.html"><img src="image/giohanghong.png" style="width: 25px; height: 18px;" />Giỏ Hàng(0)</a>
+            </li>
+            <li><a class="checkout" href="ptthanhtoan.html">Thanh toán</a></li>
+            <h4><img src="image/account.png" />&nbsp;<a href="dnhap.html">Đăng nhập</a> &nbsp;|&nbsp; <a href="dki.html">Đăng kí</a></h4>
+        </ul>
+    </div>
+
+
+    <!--khung bao trang-->
+    <div id="baotrang">
+        <!--Banner-->
+        <div id="banner" style="background:#f6f3e4">
+            <div class="logo">
+                <a href="index.html"><img src="image/logoTiendasMandH.png" style="width:450px; height:130px; float:left;" />
+                    <p><span>SHOP<span></p></a>
+            </div>
+                     
+            <div class="timkiem">
+            	<table  style="margin-right:5px; margin:0; margin-top: 0px;">
+                	<tr>
+                    	<td><input type="text" placeholder="Nhập từ khóa" size="30"  value="" style="border-radius: 10px; height:20px; " /><td>
+                        <td><input type="submit" value="Tìm Kiếm" style="border-radius: 10px; height:23px; background-color: rgb(17, 14, 14); color:#CCC; font-weight:bold;" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div><!--hết banner-->
+<!--menu sp-->
+        <div id="menu">
+        	<ul>
+            	<li><a href="#">Trang Phục</a>
+                	<ul>
+                    	<li><a href="Set.html">Set Đồ</a></li>
+                        <li><a href="Áo.html">Áo</a></li>
+                        <li><a href="">Quần</a></li>
+                        <li><a href="">Chân Váy</a></li>           
+                    </ul>
+                </li>
+                <li><a href="#">Túi Xách</a>
+                	<ul>
+                    	<li><a href="">Adidas</a></li>
+                        <li><a href="">D&G </a></li>
+                        <li><a href="">Gucci </a></li>
+                        <li><a href="">Hugo Boss</a></li>
+                        <li><a href="">Kenzo </a></li>
+                    </ul>
+                </li>
+                <li><a href="">Giày</a></li>
+                <li><a href="">Balo & Túi</a></li>
+                <li><a href="">Bán Chạy</a></li>
+                <li><a href="">Giảm Giá</a></li>
+                <li><a href="">Mới Về</a></li>
+            </ul>
+        </div>
+        <div id="khoangtrong">
+     
+        </div>        
+<!--hết menu sp-->
+        
+<!--cột trái-->        
+        <div id="cottrai">
+        	<div id="chon">
+        	<p style="text-align:center; color:rgb(241, 23, 205);"> TÙY CHỌN</p>
+            <hr />
+            <p> <span>Nhãn Hiệu</span>
+                        <p><select>
+            	<option>Chọn một nhãn hiệu..</option>
+                <option>Adidas</option>
+                <option>Zara</option>
+                <option>D&G</option>
+                <option>Nike</option>
+                <option>Gucci</option>
+                <option>ELISE</option>
+                <option>Chanel</option>
+                <option>Hnoss</option>
+                <option>NEM </option>
+                <option>JUNO</option>
+                <option>K&K Fashion</option>
+                <option>Chic-LAND</option>
+                <option>Seven AM</option>
+                <option>IVY Moda</option>
+                <option>Eva de Eva</option>
+                <option>Boran</option>
+                <option>FUNDA</option>
+                <option>COCOSIN</option>
+                <option>BELLA MODA</option>
+                <option>REN</option>
+                <option>NOSBYN</option>
+                <option>Nhà Nâu</option>
+                <option>Hà Cúc</option>
+
+            </select></p>
+                    </p>
+
+                    <p><span>Trạng Thái</span>
+                        <p><select>
+            	<option>Chọn một đặc tính..</option>
+        
+                <option>Mới về</option>
+                <option>Nổi Bật</option>
+                <option>Đang giảm giá</option>
+                <option>Còn hàng</option>
+                
+                
+            </select></p>
+                    </p>
+
+                    <p><span>Màu Sắc</span>
+                        <p><select>
+            	<option>Chọn một đặc tính..</option>
+                <option>Xám</option>
+                <option>Cam</option>
+                <option>Hồng</option>
+                <option>Xanh Lá</option>
+                <option>Xanh Biển</option>
+                <option>Đen</option>
+                <option>Đỏ</option>
+            </select></p>
+                    </p>
+
+                    <p><span>Kích Thước</span>
+                        <p><select>
+            	<option>Chọn một đặc tính..</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select></p>
+                    </p>
+                    <p><input type="submit" value="Tìm Nhanh" /></p>
+            </div>
+
+            <div id="timtheogia">
+                <p style="text-align:center; color:rgb(255, 0, 221);"> TÌM THEO GIÁ</p>
+                <hr />
+                <p><a href="">Từ 100k - 200k</a></p>
+                <p><a href="">Từ 200k - 500k</a></p>
+                <p><a href="">Từ 500k - 1000k</a></p>
+                <p><a href="">Từ 1000k - 2000k</a></p>
+                <p><a href="">Từ 2000k - 3000k</a></p>
+                <p><a href="">Từ 3000k trở lên</a></p>
+            </div>
+
+            <!--đăng kí mail---->
+            <div id="Camnhan" style="background:#CCC;">
+                <div id="box-email-container">
+                    <div id="box-email-title" style="text-align:center; color:rgb(223, 52, 214);">THÔNG BÁO</div>
+                    <div id="box-email-content" style="margin:auto; padding:5px;">
+                        <hr>
+                        <div style="padding-top: 5; font-weight:normal; font-size:15px; padding:4px; text-align: center;"><b>Đăng ký để nhận những thông tin khuyến mãi sớm nhất!</b></div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <div><input id="Promotion_name" value="" type="text" placeholder="Họ Và Tên"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><input id="Promotion_email" value="" type="text" placeholder="Email"></div>
+                                </td>
+                            </tr>
+                            <td>
+                                <div align="left"><input type="submit" value=" Gửi "></div>
+                            </td>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Hết cột trái-->
+
+        <!--cột phải-->
+        <div id="cotphai">
+            <div id="moive">
+
+                <div id="sanpham">
+                    <a href="A Chủ.html">Trang chủ ›</a><a href="A Chủ.html"> Mới Về ›</a> <a href="" style="color: #000; font-size: 15px;">Set áo sơ mi và váy 2D sọc caro</a>
+
+                    <div class="anh">
+                        <img src="image/moive/hinh1.jpg" />
+                    </div>
+                    <div class="next">
+                        <a class="img-zoom" href="moive1.html">
+                            <img src="image/moive/hinh1z.jpg" border="0" style="width:80px; height:80px;" />
+                            <span style="color:#FFF;">
+                    <img src="image/moive/hinh1z.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Ngực 94, Vai 38</i>
+                    </span>
+                        </a>
+                        <a class="img-zoom" href="moive1.html">
+                            <img src="image/moive/hinh1b.jpg" border="0" style="width:80px; height:80px;" />
+                            <span style="color:#FFF;">
+                    <img src="image/moive/hinh1b.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Ngực 94, Vai 38</i>
+                    </span>
+                        </a>
+                        <a class="img-zoom" href="moive1.html">
+                            <img src="image/moive/hinh1c.jpg" border="0" style="width:80px; height:80px;" />
+                            <span style="color:#FFF;">
+                    <img src="image/moive/hinh1c.jpg" style="width:340px; height:250px;" />
+                    <br />
+                    <i>Ngực 94, Vai 38</i>
+                    </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="thongtin">
+                        <div class="mua">
+                            <table border="0" align="left" cellpadding="5px" cellspacing="5px" style="margin: 0 auto;float: left;">
+
+                                <tr>
+                                    <td>Giá</td>
+                                    <td style="color: black; font-weight: bold;">390,000 ₫</td>
+                                </tr>
+                                <tr>
+                                    <td>Size:</td>
+                                    <td><select>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Số lượng</td>
+                                    <td><select>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5   </option>
+                                </select>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td><button type="submit" style="margin-top: 15px;width: 167px;height: 40px;border: 2px solid #fd8b72;
+                            padding: 8px 20px;margin-bottom: 5px;background: #fff2e7;
+                                color: #f00;
+                                cursor: pointer;
+                                -webkit-appearance: none;" class="themvaogio" onclick="fn()">Thêm Vào Giỏ Hàng</button></td>
+                                    <td><a href="dathang.html"><button type="submit" style="margin-top: 15px;width: 167px;height: 40px;border: 2px solid #fd8b72;
+                                padding: 8px 20px;margin-bottom: 5px;background: #fff2e7;
+                                    color: #f00;
+                                    cursor: pointer;
+                                    -webkit-appearance: none;" class="themvaogio">Mua Hàng</button></td></a>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <b>Nhận xét</b> <br>
+                                        <textarea name="gui" id="gui" cols="22" rows="0" onblur="kiemtragui()"></textarea>
+                                        <span class="form-message" id="tbgui" style="color: red;"></span>
+                                    </td>
+                                    <td>
+                                        <a> <button class="custom-btn btn-6" onclick="gui()"><span>Gửi</span></button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!--hết hàng thứ nhất-->
+
+            <!--KHUYẾN MÃI-->
+            <div id="moive">
+                <p>Sản Phẩm Tương Tự</p>
+                <div id="hang1">
+                    <div id="sp1">
+                        <a class="img-zoom" href="banchay1.html">
+                            <img src="image/banchay/hinh1.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh1.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Ngực 118, Dài 62</i>
+                    </span>
+                        </a>
+                        <dd><a href="banchay1.html">Áo khoác dù mặt mèo túi trước </a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">400,000 ₫</span><br />
+                        <span>300,000 ₫</span>
+                    </div>
+                    <div id="sp2">
+                        <a class="img-zoom" href="">
+                            <img src="image/banchay/hinh3.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh3.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Ngực 110, Dài 61</i>
+                    </span>
+                        </a>
+                        <dd><a href="">Áo hoodie mặt mèo tay đuôi mèo </a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">500,000 ₫</span><br />
+                        <span>350,000 ₫</span>
+                    </div>
+                    <div id="sp3">
+                        <a class="img-zoom" href="">
+                            <img src="image/banchay/hinh4.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh4.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Vai 40, NGực 106, Dài 67</i>
+                    </span>
+                        </a>
+                        <dd><a href="">Áo sơ mi cravat cổ chân mèo</a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">400,000 ₫</span><br />
+                        <span>280,000 ₫</span>
+                    </div>
+                </div>
+                <!--hết hàng thứ nhất-->
+                <div id="hang2">
+                    <div id="sp1">
+                        <a class="img-zoom" href="">
+                            <img src="image/banchay/hinh20.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh20.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Dài 86, Vai 41, Ngực 100</i>
+                    </span>
+                        </a>
+                        <dd><a href="">Set áo và đầm 2D đỏ nơ eo</a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">860,000 ₫</span><br />
+                        <span>750,000 ₫</span>
+                    </div>
+                    <div id="sp2">
+                        <a class="img-zoom" href="">
+                            <img src="image/banchay/hinh19.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh19.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Freesize, Dài 62</i>
+                    </span>
+                        </a>
+                        <dd><a href="">Set thủy thủ hồng cột nơ hồng</a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">550,00 ₫</span><br />
+                        <span>450,000 ₫</span>
+                    </div>
+                    <div id="sp3">
+                        <a class="img-zoom" href="">
+                            <img src="image/banchay/hinh18.jpg" border="0" />
+                            <span style="color:#FFF;">
+                    <img src="image/banchay/hinh18.jpg" style="width:350px; height:250px;" />
+                    <br />
+                    <i>Vai 67, Ngực 110, Dài 56</i>
+                    </span>
+                        </a>
+                        <dd><a href="">Set thủy thủ buộc dây ruy băng</a></dd>
+                        <span style="color:#F00; text-decoration:line-through;">430,000 ₫</span><br />
+                        <span>310,000 ₫</span>
+                    </div>
+                </div>
+                <!--hết hàng thứ 2-->
+            </div>
+            <!--hết phần KHUYẾN MÃI -->
+            <div id="hang2">
+                <div id="sp1">
+                    <a class="img-zoom" href="">
+                        <img src="image/banchay/hinh10.jpg" border="0" />
+                        <span style="color:#FFF;">
+                <img src="image/banchay/hinh10.jpg" style="width:350px; height:250px;" />
+                <br />
+                <i></i>
+                </span>
+                    </a>
+                    <dd><a href="">Áo thun cổ dấu chân mèo túi mặt mèo</a></dd>
+                    <span style="color:#F00; text-decoration:line-through;">460,000 ₫</span><br />
+                    <span>290,000 ₫</span>
+                </div>
+                <div id="sp2">
+                    <a class="img-zoom" href="">
+                        <img src="image/banchay/hinh11.jpg" border="0" />
+                        <span style="color:#FFF;">
+                <img src="image/banchay/hinh11.jpg" style="width:350px; height:250px;" />
+                <br />
+                <i>Freesize, Dài 62</i>
+                </span>
+                    </a>
+                    <dd><a href="">Áo hoodie cánh dơi nai mùa đông</a></dd>
+                    <span style="color:#F00; text-decoration:line-through;">450,00 ₫</span><br />
+                    <span>330,000 ₫</span>
+                </div>
+                <div id="sp3">
+                    <a class="img-zoom" href="">
+                        <img src="image/banchay/hinh13.jpg" border="0" />
+                        <span style="color:#FFF;">
+                <img src="image/banchay/hinh13.jpg" style="width:350px; height:250px;" />
+                <br />
+                <i>Vai 67, Ngực 110, Dài 56</i>
+                </span>
+                    </a>
+                    <dd><a href="">Áo hoodie hình mặt thú tay ngắn</a></dd>
+                    <span style="color:#F00; text-decoration:line-through;">430,000 ₫</span><br />
+                    <span>310,000 ₫</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--hết cột phải-->
+
+    <!--hết bao trang ---------------------------------->
+
+    <div id="footer">
+
+        <a href="" title="yahoo"><img src="image/yahoo.png" /></a>
+        <a href="https://www.facebook.com/hien2308/" title="facebook"><img src="image/facebook.png" /></a>
+        <a href="" title="twitter"><img src="image/twitter.png" /></a>
+        <a href="" title="mail"><img src="image/gmail.png" /></a>
+        <a href="" title="youtube"><img src="image/youtube.png" /></a>
+
+        <div class="phan2">
+            <a href="ptthanhtoan.html">&nbsp;Chính sách giao hàng&nbsp; |</a>
+            <a href="" target="_blank">&nbsp; Tuyển dụng&nbsp; | </a>
+            <a href="ptthanhtoan.html">&nbsp; Phương thức thanh toán&nbsp;|</a>
+            <a href="">&nbsp; Yêu cầu&nbsp;|</a>
+            <a href="">&nbsp; Nhận xét sản phẩm&nbsp;|</a>
+            <a href="#Camnhan">&nbsp; Đăng kí theo dõi&nbsp;|</a>
+            <a href="lienhe.html">|&nbsp; Lỗi sản phẩm&nbsp;|</a>
+        </div>
+        <br />
+        <p>
+            <b style="color: #FFF;">ĐỊA CHỈ</b> : 656/74/21 Quang Trung, Phường 11, Quận Gò Vấp, TP.Hồ Chí Minh - Hotline: 0563400311 - 0888294749 <br /> <b style="color: #FFF;">Email:</b> <a href="mailto:duchien23082000@gmail.com">duchien23082000@gmail.com</a>&nbsp;|&nbsp;
+            <a href="mailto:nguyenhoangmy2701@gmail.com">nguyenhoangmy2701@gmail.com</a> <br> <b style="color: #FFF;">Giờ mở cửa:</b> 8h - 21h Thứ hai đến thứ Bảy. Chủ nhật đặt hàng qua điện thoại </p>
+        <p id="footer-right">Trần Đức Hiền - Nguyễn Hoàng Mỹ</p>
+
+    </div>
+    <!---hết chân webstie----->
+</body>
+
+</html>

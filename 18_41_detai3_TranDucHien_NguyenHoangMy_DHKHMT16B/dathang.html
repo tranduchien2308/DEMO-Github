@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt hàng</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="css/bootstrap.min.css"></script>
+    <script src="javascript/jquery-3.6.0.min.js"></script>
+    <script src="javascript/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#dnm").click(function() {
+                $("#myModal").modal();
+            });
+
+            function KiemTrasdt() {
+                let ha = $("#txtsdt").val();
+                let regex = /^[0-9]{10}$/;
+                if (ha.trim() === '') {
+                    $("#tbsdt").html("Không được bỏ trống sđt");
+                    return false;
+                }
+                if (!regex.test(ha)) {
+                    $("#tbsdt").html("Bạn cần nhập số điện thoại");
+                    return false;
+                }
+                $("#tbsdt").html("*");
+                return true;
+            }
+
+            function KiemTrasoluong() {
+                let ha = $("#txtsl").val();
+                let regex = /^(?=.*[0-9]).{1,}$/;
+                if (ha.trim() === '') {
+                    $("#tbsl").html("Không được bỏ trống");
+                    return false;
+                }
+                if (!regex.test(ha)) {
+                    $("#tbsl").html("Vui lòng nhập đúng số lượng");
+                    return false;
+                }
+                $("#tbsl").html("*");
+                return true;
+            }
+
+            function KiemTrahoten() {
+                let ha = $("#txthoten").val();
+                if (ha.trim() === '') {
+                    $("#tbhoten").html("Không được bỏ trống tên");
+                    return false;
+                }
+                $("#tbhoten").html("*");
+                return true;
+            }
+
+            function KiemTradiachi() {
+                let ha = $("#txtdc").val();
+                if (ha.trim() === '') {
+                    $("#tbdc").html("Không được bỏ trống địa chỉ");
+                    return false;
+                }
+                $("#tbdc").html("*");
+                return true;
+            }
+
+
+
+
+
+            function dangki() {
+                if (!KiemTrahoten() || !KiemTrasdt() || !KiemTradiachi() || !KiemTrasoluong()) {
+                    $("#thongbao").html("Mời bạn nhập đúng và đầy đủ thông tin");
+                    return false;
+                }
+
+
+                let hoten = $("#txthoten").val();
+                let sdt = $("#txtsdt").val();
+                let ndh = $("#txtndh").val();
+                let diachi = $("#txtdc").val();
+                let soluong = $("#txtsl").val();
+                let row = "<tr><td>" + (++i) + "</td><td>" + hoten + "</td><td>" + sdt + "</td><td>" + ndh + "</td><td>" + diachi + "</td><td>" + soluong + "</td></tr>";
+                alert("Cảm ơn bạn đã ủng hộ chúng tôi");
+                $("tbody").append(row);
+            }
+            $("#btnLuu").click(dangki);
+            $("#txtsdt").blur(KiemTrasdt);
+            $("#txtsl").blur(KiemTrasoluong);
+            $("#txthoten").blur(KiemTrahoten);
+            $("#txtdc").blur(KiemTradiachi);
+
+
+        });
+        let i = 0;
+    </script>
+
+    <style>
+        #mydiv {
+            background-size: 100% 100%;
+            height: 180px;
+            border: 1px solid black;
+        }
+        
+        img {
+            position: absolute;
+            top: 20px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #F6F3E4;">
+    <div class="container-fluid">
+        <div id="mydiv" class="row ">
+            <a href="index.html"><img src="image/logoTiendasMandH.png"></a>
+        </div>
+        <div class="row navbar navbar-expend " style="border-bottom: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;">
+            <ul class="nav narbar-nav">
+                <li class="nav-item" id="dnm" style="width: 167px;height: 40px;border: 2px solid #fd8b72;
+                padding: 8px 20px;background: #fff2e7;
+                    color: #f00;
+                    cursor: pointer; border-radius: 10px; text-align: center;  font: 1em sans-serif; box-shadow: 0 5px 5px 0 #fd8b72 ;">
+                    <a class="nav-link">Đặt Hàng</a></li>
+
+            </ul>
+        </div>
+        <div class="row h-500" style="border-bottom: 1px solid black;border-left: 1px solid black;border-right: 1px solid black;">
+            <p class="col-12 text-center"></p>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Họ và tên</th>
+                        <th>Số điện thoại</th>
+                        <th>Ngày đặt hàng</th>
+                        <th>Địa chỉ</th>
+                        <th>Số lượng</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    </div>
+    <div class="modal fake" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100">THÔNG TIN KHÁCH HÀNG</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="form-group">
+                    <div id="thongbao" class="text-danger" style="text-align: center;"></div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="txthoten">Họ và tên</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="txthoten" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <span id="tbhoten" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="txtsdt">Số điện thoại</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="txtsdt" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <span id="tbsdt" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="txtndh">Ngày đặt hàng</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="date" id="txtndh" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <span id="tbndh" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="txtdc">Địa chỉ</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="txtdc" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <span id="tbdc" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="txtsl">Số lượng</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" id="txtsl" class="form-control">
+                        </div>
+                        <div class="col-4">
+                            <span id="tbsl" class="text-danger font-italic">*</span>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success btn-block" id="btnLuu">Lưu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
